@@ -74,7 +74,7 @@ class Sophia(torch.optim.Optimizer):
         return B * g_hat * g_hat
     
 class SophiaG(Optimizer):
-    def __init__(self, params, lr=1e-4, betas=(0.965, 0.99), rho = 0.04,
+    def __init__(self, params, lr=1e-4, betas=(0.965, 0.99), rho = 0.01,
          weight_decay=1e-1, *, maximize: bool = False,
          capturable: bool = False):
         if not 0.0 <= lr:
